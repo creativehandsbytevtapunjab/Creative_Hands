@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact – Creative Hands</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo-area">
+      <img src="assets/logo1.png">
+      <img src="assets/logo2.png">
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container column">
+    <h1>Contact Creative Hands</h1>
+    <p>
+      For partnerships, procurement, exhibitions, or institutional collaboration,
+      please reach out using the form below.
+    </p>
+  </div>
+</section>
+
+<section class="section light-bg">
+  <div class="container">
+    <form class="contact-form" onsubmit="return validateForm()">
+
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" id="name">
+      </div>
+
+      <div class="form-group">
+        <label>Email Address *</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="form-group">
+        <label>Organization / Institution</label>
+        <input type="text">
+      </div>
+
+      <div class="form-group">
+        <label>Message *</label>
+        <textarea id="message"></textarea>
+      </div>
+
+      <button type="submit">Submit Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<script>
+function validateForm(){
+  if(
+    name.value === "" ||
+    email.value === "" ||
+    message.value === ""
+  ){
+    alert("Please fill all required fields.");
+    return false;
+  }
+  alert("Inquiry submitted successfully.");
+  return true;
+}
+</script>
+
+<footer class="footer">
+  <p>© 2026 Technical Education & Vocational Training Authority (TEVTA), Punjab</p>
+</footer>
+
+</body>
+</html>
